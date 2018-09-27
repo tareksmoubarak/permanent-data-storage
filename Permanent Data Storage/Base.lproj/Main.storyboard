@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +12,65 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Permanent_Data_Storage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCw-gL-6UT">
+                                <rect key="frame" x="63" y="282" width="249" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+961XXXXXXXX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3f-Y8-3GS">
+                                <rect key="frame" x="18" y="318.5" width="339" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8T3-CO-8L4">
+                                <rect key="frame" x="159.5" y="381" width="56" height="30"/>
+                                <state key="normal" title="SUBMIT"/>
+                                <connections>
+                                    <action selector="SaveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5q-ia-e3s"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're current saved number is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sG-ah-ufP">
+                                <rect key="frame" x="69" y="59" width="237" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgd-sn-Tow">
+                                <rect key="frame" x="131.5" y="83.5" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h3f-Y8-3GS" secondAttribute="trailing" constant="18" id="7wM-G3-b0v"/>
+                            <constraint firstItem="5sG-ah-ufP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="8n2-x0-MBS"/>
+                            <constraint firstItem="RCw-gL-6UT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BkC-Xh-wCG"/>
+                            <constraint firstItem="h3f-Y8-3GS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="L2e-6l-OpQ"/>
+                            <constraint firstItem="h3f-Y8-3GS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zey-43-O89"/>
+                            <constraint firstItem="8T3-CO-8L4" firstAttribute="top" secondItem="h3f-Y8-3GS" secondAttribute="bottom" constant="32.5" id="be5-eJ-Elw"/>
+                            <constraint firstItem="Rgd-sn-Tow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gsR-MH-jgJ"/>
+                            <constraint firstItem="8T3-CO-8L4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m9z-jQ-SYU"/>
+                            <constraint firstItem="Rgd-sn-Tow" firstAttribute="firstBaseline" secondItem="5sG-ah-ufP" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="n18-oK-roU"/>
+                            <constraint firstItem="h3f-Y8-3GS" firstAttribute="top" secondItem="RCw-gL-6UT" secondAttribute="bottom" constant="15.5" id="nIz-TA-v8J"/>
+                            <constraint firstItem="5sG-ah-ufP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s4w-SG-r4O"/>
+                            <constraint firstItem="h3f-Y8-3GS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w0g-Nl-0YK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="PhoneNumber" destination="Rgd-sn-Tow" id="c3w-i0-uI4"/>
+                        <outlet property="UserInput" destination="h3f-Y8-3GS" id="1wy-el-28f"/>
+                        <outlet property="resultTitle" destination="5sG-ah-ufP" id="ZwF-Ju-j92"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
